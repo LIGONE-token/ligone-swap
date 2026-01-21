@@ -103,11 +103,36 @@
 </section>
 
 <section class="swap-box">
-  <iframe
-    src="https://app.uniswap.org/#/swap?chain=polygon&outputCurrency=0x92B3677ae2EA7c19aa4fA56936d11be99BcaC37d"
-    loading="lazy">
-  </iframe>
+  <button id="loadSwap" style="
+    width:100%;
+    padding:18px;
+    font-size:1.1rem;
+    border-radius:12px;
+    border:none;
+    cursor:pointer;
+    background:#4fd1c5;
+    color:#0b0f14;
+    font-weight:600;
+  ">
+    Load Token Swap
+  </button>
+
+  <div id="swapContainer"></div>
 </section>
+
+<script>
+  document.getElementById("loadSwap").onclick = function () {
+    this.remove();
+    document.getElementById("swapContainer").innerHTML = `
+      <iframe
+        src="https://app.uniswap.org/#/swap?chain=polygon&outputCurrency=0x92B3677ae2EA7c19aa4fA56936d11be99BcaC37d"
+        style="width:100%;height:540px;border:none;border-radius:12px;"
+        loading="lazy">
+      </iframe>
+    `;
+  };
+</script>
+
 
 <footer>
   <p>
