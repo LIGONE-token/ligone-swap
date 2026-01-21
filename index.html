@@ -81,6 +81,31 @@
       color: #4fd1c5;
       text-decoration: none;
     }
+    <style>
+.swap-box {
+  position: relative;
+}
+.swap-loading {
+  position: absolute;
+  inset: 0;
+  background: rgba(11,15,20,0.92);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  font-size: 1.1rem;
+  color: #9aa4b2;
+  z-index: 2;
+  border-radius: 12px;
+}
+.swap-box iframe {
+  width: 100%;
+  height: 540px;
+  border: none;
+  border-radius: 12px;
+}
+</style>
+
   </style>
 </head>
 
@@ -102,22 +127,18 @@
 
 
 <section class="swap-box">
-  <button id="loadSwap" style="
-    width:100%;
-    padding:18px;
-    font-size:1.1rem;
-    border-radius:12px;
-    border:none;
-    cursor:pointer;
-    background:#4fd1c5;
-    color:#0b0f14;
-    font-weight:600;
-  ">
-    Load Token Swap
-  </button>
+  <div class="swap-loading" id="swapLoading">
+    <strong>Token Swap</strong><br>
+    Loading decentralized swap interface…
+  </div>
 
-  <div id="swapContainer"></div>
+  <iframe
+    src="https://app.uniswap.org/#/swap?chain=polygon"
+    loading="eager"
+    onload="document.getElementById('swapLoading').style.display='none';"
+  ></iframe>
 </section>
+
 
 <script>
   document.getElementById("loadSwap").onclick = function () {
