@@ -8,7 +8,7 @@
   <meta name="description" content="Decentralized token swap on Polygon. Swap cryptocurrencies directly from your wallet. Powered by Uniswap." />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
 
-  <!-- Open Graph (Social Preview) -->
+  <!-- Open Graph -->
   <meta property="og:title" content="Token Swap on Polygon" />
   <meta property="og:description" content="Decentralized token swap on Polygon. Powered by Uniswap." />
   <meta property="og:image" content="https://ligone-token.github.io/ligone-swap/og-image.png" />
@@ -22,30 +22,86 @@
   <meta name="twitter:description" content="Decentralized token swap on Polygon. Powered by Uniswap." />
   <meta name="twitter:image" content="https://ligone-token.github.io/ligone-swap/og-image.png" />
 
-  <!-- Favicon (optional, falls vorhanden) -->
-  <!-- <link rel="icon" href="favicon.ico" /> -->
+  <!-- STYLE -->
+  <style>
+    body {
+      margin: 0;
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+      background: #0b0f14;
+      color: #eaeaea;
+    }
+    header {
+      padding: 24px;
+      text-align: center;
+      border-bottom: 1px solid #222;
+    }
+    header h1 {
+      margin: 0;
+      font-size: 1.8rem;
+    }
+    header p {
+      margin-top: 8px;
+      color: #9aa4b2;
+    }
+    .featured {
+      background: linear-gradient(135deg, #1a222e, #0f141b);
+      padding: 24px;
+      margin: 24px;
+      border-radius: 14px;
+      border: 1px solid #2a3442;
+    }
+    .featured h2 {
+      margin-top: 0;
+      color: #4fd1c5;
+    }
+    .featured p {
+      color: #cbd5e1;
+    }
+    .swap-box {
+      margin: 24px;
+      padding: 24px;
+      border-radius: 14px;
+      background: #111827;
+      border: 1px solid #1f2937;
+    }
+    .swap-box iframe {
+      width: 100%;
+      height: 540px;
+      border: none;
+      border-radius: 12px;
+    }
+    footer {
+      text-align: center;
+      padding: 24px;
+      color: #6b7280;
+      font-size: 0.9rem;
+    }
+    a {
+      color: #4fd1c5;
+      text-decoration: none;
+    }
+  </style>
 </head>
 
 <body>
 
 <header>
   <h1>LIGONE Swap</h1>
-  <p>Fairer Token-Tausch · Transparent · Polygon</p>
+  <p>Decentralized Token Swap · Polygon</p>
 </header>
 
 <section class="featured">
-  <h2>⭐ Hervorgehobener Token: LIGONE (LIG1)</h2>
+  <h2>⭐ Featured Token: LIGONE (LIG1)</h2>
   <p>
-    LIGONE steht für Fairness, Transparenz und Schutz kleiner Anleger.<br>
-    Keine künstliche Bevorzugung – echte Marktpreise, nachvollziehbare Tokenomics.
+    LIGONE focuses on transparency, fair tokenomics and protection of small investors.<br>
+    Market-based pricing via decentralized liquidity.
   </p>
   <p>
-    <strong>Empfohlen für alle, die bewusst tauschen wollen.</strong>
+    <strong>Highlighted for users who want to swap consciously.</strong>
   </p>
 </section>
 
 <section class="swap-box">
-  <!-- Uniswap Swap eingebettet, LIG1 vorausgewählt -->
   <iframe
     src="https://app.uniswap.org/#/swap?chain=polygon&outputCurrency=0x92B3677ae2EA7c19aa4fA56936d11be99BcaC37d"
     loading="lazy">
